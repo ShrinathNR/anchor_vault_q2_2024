@@ -88,9 +88,6 @@ describe("vault", () => {
       const tx = await program.methods.close()
       .accounts({
         signer: user.publicKey,
-        state,
-        vault,
-        systemProgram: SystemProgram.programId
       })
       .signers([
         user
